@@ -116,17 +116,17 @@ namespace Company
             // QUERY WITH LINQ QUERY SYNTAX
             using (var context = companyContextFactory.CreateDbContext(args))
             {
-                var query =
+                var query1 =
                     from e
                         in context.Employees
                     where e.FirstName == "David"
                     select e;
 
-                var david = query.FirstOrDefault();
+                var david = query1.FirstOrDefault();
                 
                 // print queries
                  // with foreach
-                 foreach (var x in query)
+                 foreach (var x in query1)
                  {
                      Console.WriteLine("► " + x);
                  }
@@ -134,6 +134,9 @@ namespace Company
                  // with FirstOrDefault
                 Console.WriteLine("► " + david);
             }
+            
+            var query = from a in companyContextFactory.Artists
+                where a.
         }
     }
 }
