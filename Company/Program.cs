@@ -134,9 +134,6 @@ namespace Company
                  // with FirstOrDefault
                 Console.WriteLine("► " + david);
             }
-            
-            var query = from a in companyContextFactory.Artists
-                where a.
         }
     }
 }
